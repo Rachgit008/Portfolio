@@ -6,7 +6,41 @@ const scrollPage = (btn) =>{
 }
 </script> */}
 
-//<!---------------------------------------- Script of A out Section ------------------------------------------------------->
+//<!---------------------------------------- Script of About Section ------------------------------------------------------->
+    // const openBtn = document.getElementById("AbtModal");
+    // const closeBtn = document.getElementById("closeModal");
+    // const about = document.getElementById("AboutBx");
+
+    // openBtn.addEventListener("click",() =>{
+    //     about.classList.remove("hidden");
+    //     about.classList.add("open");
+    // });    
+    
+    // closeBtn.addEventListener("click",() =>{
+    //     about.classList.add("hidden");  
+    //     about.classList.remove("open");
+    // }); 
+
+
+    const openBtn = document.getElementById("AbtModal");
+const closeBtn = document.getElementById("closeModal");
+const about = document.getElementById("AboutBx");
+
+openBtn.addEventListener("click", () => {
+    about.classList.remove("hidden");
+    setTimeout(() => {
+        about.classList.remove("opacity-0", "translate-y-[-50px]");
+        about.classList.add("opacity-100", "translate-y-0");
+    }, 10); // Small timeout to trigger transition
+});
+
+closeBtn.addEventListener("click", () => {
+    about.classList.remove("opacity-100", "translate-y-0");
+    about.classList.add("opacity-0", "translate-y-[-50px]");
+    setTimeout(() => {
+        about.classList.add("hidden");
+    }, 500); // After transition
+});
 
 
 
